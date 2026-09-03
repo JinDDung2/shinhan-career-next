@@ -1,4 +1,4 @@
-package practice;
+package practice.lab01;
 
 public class RobotTest {
     /**
