@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">Java 메모리 구조: Stack과 Heap</title>
+  <desc id="desc">Stack에는 메서드 호출과 지역 변수, Heap에는 new로 만든 객체, Method Area에는 static 정보가 저장된다</desc>
+  <rect width="980" height="560" fill="#f7f9fc"/>
+  <text x="490" y="54" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#172033">Java 메모리 구조</text>
+  <text x="490" y="88" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#566174">메서드 실행, 객체 생성, static 공유 위치를 구분한다</text>
+  <rect x="55" y="125" width="255" height="355" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="182" y="163" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700" fill="#7c2d12">Stack</text>
+  <rect x="90" y="205" width="185" height="70" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="182" y="232" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="16" fill="#7c2d12">main()</text>
+  <text x="182" y="256" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="15" fill="#7c2d12">tom = 0xA1</text>
+  <rect x="90" y="292" width="185" height="70" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="182" y="320" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="16" fill="#7c2d12">setSpeed()</text>
+  <text x="182" y="344" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="15" fill="#7c2d12">speed = 100</text>
+  <text x="182" y="424" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="15" fill="#566174">메서드 종료 시 정리</text>
+  <rect x="365" y="125" width="255" height="355" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="492" y="163" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700" fill="#1e3a8a">Heap</text>
+  <rect x="407" y="220" width="170" height="130" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="492" y="252" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="18" font-weight="700" fill="#1e3a8a">Car 객체</text>
+  <text x="492" y="290" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#1e3a8a">ownerName = Tom</text>
+  <text x="492" y="320" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#1e3a8a">speed = 100</text>
+  <text x="492" y="424" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="15" fill="#566174">new로 만든 객체 저장</text>
+  <rect x="675" y="125" width="255" height="355" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="802" y="163" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700" fill="#14532d">Method Area</text>
+  <rect x="717" y="220" width="170" height="130" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="802" y="252" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="18" font-weight="700" fill="#14532d">Car class</text>
+  <text x="802" y="290" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#14532d">static cnt</text>
+  <text x="802" y="320" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#14532d">method info</text>
+  <text x="802" y="424" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="15" fill="#566174">클래스 단위 정보 저장</text>
+  <path d="M275 240 C335 240 345 250 405 270" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

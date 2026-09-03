@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">Java 인스턴스 변수와 static 변수</title>
+  <desc id="desc">인스턴스 변수는 객체마다 따로 존재하고 static 변수는 클래스가 하나만 공유한다</desc>
+  <rect width="980" height="560" fill="#f7f9fc"/>
+  <text x="490" y="54" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#172033">인스턴스 변수 vs static 변수</text>
+  <text x="490" y="88" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#566174">객체마다 다른 값인지, 클래스가 함께 쓰는 값인지 구분한다</text>
+  <rect x="75" y="135" width="260" height="250" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="205" y="176" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="22" font-weight="700" fill="#1e3a8a">tom: Car</text>
+  <rect x="115" y="215" width="180" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="205" y="247" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#1e3a8a">ownerName = Tom</text>
+  <rect x="115" y="285" width="180" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="205" y="317" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#1e3a8a">speed = 100</text>
+  <rect x="375" y="135" width="260" height="250" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="505" y="176" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="22" font-weight="700" fill="#1e3a8a">henry: Car</text>
+  <rect x="415" y="215" width="180" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="505" y="247" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#1e3a8a">ownerName = Henry</text>
+  <rect x="415" y="285" width="180" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="505" y="317" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#1e3a8a">speed = 200</text>
+  <rect x="695" y="175" width="210" height="170" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="800" y="217" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="22" font-weight="700" fill="#14532d">Car class</text>
+  <rect x="735" y="255" width="130" height="52" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="800" y="287" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="17" fill="#14532d">static cnt = 2</text>
+  <path d="M335 260 C420 420 675 420 745 315" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M635 260 C680 360 715 360 775 315" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="490" y="455" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700" fill="#172033">ownerName, speed는 객체별로 따로 저장된다</text>
+  <text x="490" y="486" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700" fill="#14532d">cnt는 Car 클래스가 하나만 가지고 함께 공유한다</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

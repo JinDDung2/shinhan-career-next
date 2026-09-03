@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Java 지역 변수 생명주기</title>
+  <desc id="desc">지역 변수는 선언된 메서드나 블록 안에서만 존재하고 블록이 끝나면 사라진다</desc>
+  <rect width="980" height="520" fill="#f7f9fc"/>
+  <text x="490" y="55" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#172033">지역 변수의 범위와 생명주기</text>
+  <text x="490" y="88" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#566174">변수는 선언된 중괄호 안에서만 사용할 수 있다</text>
+  <rect x="80" y="130" width="820" height="300" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="125" y="178" font-family="Menlo, Consolas, monospace" font-size="18" fill="#334155">static void m1() {</text>
+  <rect x="150" y="205" width="260" height="70" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="280" y="247" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#14532d">int i = 10;</text>
+  <text x="125" y="315" font-family="Menlo, Consolas, monospace" font-size="18" fill="#334155">}</text>
+  <path d="M280 282 L280 352" stroke="#16a34a" stroke-width="3" marker-end="url(#down)"/>
+  <rect x="180" y="360" width="200" height="44" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="280" y="388" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" font-weight="700" fill="#7f1d1d">m1 종료: i 사라짐</text>
+  <line x1="490" y1="155" x2="490" y2="405" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="540" y="178" font-family="Menlo, Consolas, monospace" font-size="18" fill="#334155">static void m2() {</text>
+  <rect x="565" y="205" width="260" height="70" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="695" y="236" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="17" fill="#7f1d1d">System.out.println(i);</text>
+  <text x="695" y="259" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="14" font-weight="700" fill="#7f1d1d">컴파일 오류</text>
+  <text x="540" y="315" font-family="Menlo, Consolas, monospace" font-size="18" fill="#334155">}</text>
+  <text x="695" y="380" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#566174">m2 안에는 i가 선언되어 있지 않다</text>
+  <defs>
+    <marker id="down" markerWidth="10" markerHeight="10" refX="3" refY="8" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,0 L3,9 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

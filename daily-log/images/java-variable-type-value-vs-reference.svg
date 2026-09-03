@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">Java 변수 타입: 값 타입과 참조 타입</title>
+  <desc id="desc">값 타입 변수에는 실제 값이 저장되고, 참조 타입 변수에는 Heap 객체의 위치가 저장되는 구조</desc>
+  <rect width="980" height="520" fill="#f7f9fc"/>
+  <text x="490" y="54" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="700" fill="#172033">Java 변수 타입</text>
+  <text x="490" y="88" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#566174">변수 안에 무엇이 들어가는지 먼저 구분한다</text>
+  <rect x="70" y="130" width="380" height="300" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="260" y="172" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700" fill="#115e59">값 타입</text>
+  <text x="260" y="205" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#3d4858">변수 칸에 실제 값이 들어간다</text>
+  <rect x="145" y="250" width="230" height="86" rx="6" fill="#e0f2f1" stroke="#0f766e" stroke-width="2"/>
+  <text x="260" y="284" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="19" fill="#123b39">int speed</text>
+  <line x1="175" y1="300" x2="345" y2="300" stroke="#0f766e" stroke-width="1"/>
+  <text x="260" y="326" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="22" font-weight="700" fill="#123b39">100</text>
+  <text x="260" y="376" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="15" fill="#566174">예: int, double, boolean, char</text>
+  <rect x="530" y="130" width="380" height="300" rx="8" fill="#ffffff" stroke="#c9d3e5" stroke-width="2"/>
+  <text x="720" y="172" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700" fill="#1d4ed8">참조 타입</text>
+  <text x="720" y="205" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="16" fill="#3d4858">변수 칸에 객체 위치가 들어간다</text>
+  <rect x="570" y="250" width="130" height="86" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="635" y="283" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="18" fill="#1e3a8a">Car tom</text>
+  <line x1="590" y1="300" x2="680" y2="300" stroke="#2563eb" stroke-width="1"/>
+  <text x="635" y="326" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="18" font-weight="700" fill="#1e3a8a">0xA1</text>
+  <path d="M704 293 C736 293 741 293 772 293" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="775" y="238" width="105" height="110" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="827" y="271" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="16" fill="#312e81">Car</text>
+  <text x="827" y="301" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="14" fill="#3d4858">Tom</text>
+  <text x="827" y="326" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="14" fill="#3d4858">100km</text>
+  <text x="720" y="376" text-anchor="middle" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="15" fill="#566174">예: String, 배열, 클래스 객체</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>
