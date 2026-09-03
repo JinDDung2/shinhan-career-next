@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">Java inheritance and super constructor flow</title>
+  <desc id="desc">Diagram showing that creating a Car object calls the Vehicle constructor first through super, then initializes the Car field.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="980" height="420" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">상속 객체 생성 흐름</text>
+  <text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#475569">자식 객체를 만들면 부모 생성자가 먼저 실행되고, 그 다음 자식 필드가 초기화된다.</text>
+
+  <rect x="50" y="135" width="230" height="160" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="78" y="172" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">new Car(4)</text>
+  <text x="78" y="210" font-family="Arial, sans-serif" font-size="17" fill="#1e40af">Car 생성 요청</text>
+  <text x="78" y="240" font-family="Arial, sans-serif" font-size="15" fill="#334155">자식 객체를 만들기 시작</text>
+
+  <line x1="290" y1="215" x2="420" y2="215" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="322" y="198" font-family="Arial, sans-serif" font-size="15" fill="#334155">첫 줄</text>
+
+  <rect x="430" y="105" width="250" height="220" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="462" y="145" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#14532d">super("BMW", 200)</text>
+  <text x="462" y="185" font-family="Arial, sans-serif" font-size="17" fill="#166534">Vehicle 생성자 호출</text>
+  <rect x="462" y="215" width="185" height="70" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="480" y="245" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">brand = "BMW"</text>
+  <text x="480" y="270" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">speed = 200</text>
+
+  <line x1="690" y1="215" x2="820" y2="215" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="830" y="135" width="110" height="160" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="854" y="172" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7f1d1d">Car</text>
+  <text x="850" y="212" font-family="Arial, sans-serif" font-size="16" fill="#991b1b">자식 필드</text>
+  <text x="850" y="242" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">doorCount</text>
+  <text x="850" y="268" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">= 4</text>
+
+  <rect x="355" y="355" width="270" height="36" rx="18" fill="#fff7ed" stroke="#f97316"/>
+  <text x="382" y="379" font-family="Arial, sans-serif" font-size="15" fill="#9a3412">super() 또는 this()는 생성자의 첫 줄</text>
+</svg>
