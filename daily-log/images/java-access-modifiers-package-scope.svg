@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Java access modifiers and package scope</title>
+  <desc id="desc">Diagram showing public, protected, default, and private access ranges in Java packages.</desc>
+  <rect width="980" height="430" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">접근 제어자 공개 범위</text>
+  <text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#475569">필드와 메서드를 어디까지 보여줄지 정하면 객체의 상태를 더 안전하게 지킬 수 있다.</text>
+
+  <rect x="55" y="130" width="390" height="245" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="82" y="166" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">package ex10.mycomp</text>
+  <rect x="85" y="200" width="150" height="95" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="118" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">A1</text>
+  <text x="103" y="264" font-family="Arial, sans-serif" font-size="14" fill="#334155">private</text>
+  <text x="103" y="284" font-family="Arial, sans-serif" font-size="14" fill="#334155">default</text>
+  <rect x="265" y="200" width="150" height="95" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="298" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">same package</text>
+  <text x="285" y="264" font-family="Arial, sans-serif" font-size="14" fill="#334155">default 접근 가능</text>
+
+  <rect x="535" y="130" width="390" height="245" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="562" y="166" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#14532d">other package</text>
+  <rect x="565" y="200" width="150" height="95" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="602" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">child</text>
+  <text x="582" y="264" font-family="Arial, sans-serif" font-size="14" fill="#334155">protected 가능</text>
+  <rect x="745" y="200" width="150" height="95" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="790" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">other</text>
+  <text x="771" y="264" font-family="Arial, sans-serif" font-size="14" fill="#334155">public만 가능</text>
+
+  <rect x="177" y="342" width="625" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="205" y="369" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">private &lt; default &lt; protected &lt; public 순서로 공개 범위가 넓어진다.</text>
+</svg>

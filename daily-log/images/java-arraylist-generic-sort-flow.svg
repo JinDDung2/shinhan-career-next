@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Java ArrayList generic and Comparator sort flow</title>
+  <desc id="desc">Diagram showing Employee objects in an ArrayList, type safety with generics, and sorting by pay descending.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="980" height="430" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">ArrayList, Generic, Comparator</text>
+  <text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#475569">제네릭으로 Employee만 담고, Comparator로 세후 급여가 높은 순서로 정렬한다.</text>
+
+  <rect x="55" y="135" width="315" height="220" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="93" y="174" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#075985">ArrayList&lt;Employee&gt;</text>
+  <rect x="92" y="205" width="240" height="38" rx="6" fill="#ffffff" stroke="#38bdf8"/>
+  <text x="122" y="230" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">kim / 900000</text>
+  <rect x="92" y="255" width="240" height="38" rx="6" fill="#ffffff" stroke="#38bdf8"/>
+  <text x="122" y="280" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">park / 2700000</text>
+  <rect x="92" y="305" width="240" height="38" rx="6" fill="#ffffff" stroke="#38bdf8"/>
+  <text x="122" y="330" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">hong / 1800000</text>
+
+  <line x1="382" y1="245" x2="527" y2="245" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="400" y="225" font-family="Arial, sans-serif" font-size="15" fill="#334155">Comparator</text>
+  <text x="396" y="268" font-family="Arial, sans-serif" font-size="14" fill="#475569">높은 급여 먼저</text>
+
+  <rect x="540" y="135" width="385" height="220" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="625" y="174" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#14532d">정렬 후 출력</text>
+  <rect x="590" y="205" width="285" height="38" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="625" y="230" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">heo / 4500000</text>
+  <rect x="590" y="255" width="285" height="38" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="625" y="280" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">lee / 3600000</text>
+  <rect x="590" y="305" width="285" height="38" rx="6" fill="#ffffff" stroke="#86efac"/>
+  <text x="625" y="330" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">park / 2700000</text>
+
+  <rect x="263" y="374" width="455" height="36" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="293" y="398" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">Generic은 타입 안정성, Comparator는 정렬 기준을 담당한다.</text>
+</svg>
