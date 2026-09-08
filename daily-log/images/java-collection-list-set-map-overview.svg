@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Java collection List Set Map overview</title>
+  <desc id="desc">Overview diagram comparing Java List, Set, and Map collection types.</desc>
+  <rect width="980" height="430" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Java 컬렉션 구조</text>
+  <text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#475569">여러 데이터를 어떤 모양으로 담을지에 따라 List, Set, Map을 선택한다.</text>
+
+  <rect x="55" y="135" width="270" height="210" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="154" y="174" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#1e3a8a">List</text>
+  <rect x="90" y="210" width="200" height="38" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="122" y="235" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">0: "kim"</text>
+  <rect x="90" y="258" width="200" height="38" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="122" y="283" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">1: "kim"</text>
+  <text x="101" y="324" font-family="Arial, sans-serif" font-size="15" fill="#334155">순서 O, 중복 O</text>
+
+  <rect x="355" y="135" width="270" height="210" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="457" y="174" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#14532d">Set</text>
+  <circle cx="445" cy="235" r="33" fill="#ffffff" stroke="#86efac" stroke-width="2"/>
+  <text x="426" y="242" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">kim</text>
+  <circle cx="525" cy="270" r="33" fill="#ffffff" stroke="#86efac" stroke-width="2"/>
+  <text x="508" y="277" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">lee</text>
+  <text x="404" y="324" font-family="Arial, sans-serif" font-size="15" fill="#334155">중복 X</text>
+
+  <rect x="655" y="135" width="270" height="210" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="753" y="174" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#92400e">Map</text>
+  <rect x="690" y="210" width="200" height="38" rx="6" fill="#ffffff" stroke="#fbbf24"/>
+  <text x="708" y="235" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">100 -> Product</text>
+  <rect x="690" y="258" width="200" height="38" rx="6" fill="#ffffff" stroke="#fbbf24"/>
+  <text x="708" y="283" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">102 -> Product</text>
+  <text x="703" y="324" font-family="Arial, sans-serif" font-size="15" fill="#334155">key:value 한 쌍</text>
+
+  <rect x="232" y="370" width="515" height="36" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="263" y="394" font-family="Arial, sans-serif" font-size="15" fill="#0f172a">순서가 필요하면 List, 중복 제거는 Set, key 조회는 Map</text>
+</svg>

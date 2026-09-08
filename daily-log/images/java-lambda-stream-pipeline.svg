@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Java lambda and stream pipeline</title>
+  <desc id="desc">Diagram showing a Java stream pipeline using filter, map, and forEach with lambda expressions.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="980" height="430" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">람다와 Stream API</text>
+  <text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#475569">컬렉션 데이터를 흐름으로 만들고, 조건 선택과 변환을 단계별로 처리한다.</text>
+
+  <rect x="55" y="170" width="170" height="95" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="94" y="207" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1e3a8a">stream()</text>
+  <text x="82" y="238" font-family="Arial, sans-serif" font-size="15" fill="#334155">데이터 흐름 시작</text>
+
+  <line x1="235" y1="218" x2="315" y2="218" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="325" y="170" width="170" height="95" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="366" y="207" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#14532d">filter</text>
+  <text x="354" y="238" font-family="Arial, sans-serif" font-size="15" fill="#334155">짝수만 통과</text>
+
+  <line x1="505" y1="218" x2="585" y2="218" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="595" y="170" width="170" height="95" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="659" y="207" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#92400e">map</text>
+  <text x="641" y="238" font-family="Arial, sans-serif" font-size="15" fill="#334155">제곱으로 변환</text>
+
+  <line x1="775" y1="218" x2="855" y2="218" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="865" y="170" width="90" height="95" rx="8" fill="#fae8ff" stroke="#c026d3" stroke-width="2"/>
+  <text x="881" y="207" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#86198f">forEach</text>
+  <text x="885" y="238" font-family="Arial, sans-serif" font-size="15" fill="#334155">출력</text>
+
+  <rect x="270" y="330" width="440" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="296" y="357" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">x -> x % 2 == 0 처럼 짧은 동작을 람다로 전달한다.</text>
+</svg>

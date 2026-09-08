@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">Java IO stream types</title>
+  <desc id="desc">Diagram comparing Java byte streams, character streams, and filter streams.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="980" height="430" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Java I/O 스트림 분류</text>
+  <text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#475569">스트림은 출발지에서 도착지로 한 방향으로 흐르는 데이터 통로다.</text>
+
+  <rect x="60" y="150" width="230" height="135" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="102" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">바이트 단위</text>
+  <text x="95" y="228" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">InputStream</text>
+  <text x="95" y="255" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">OutputStream</text>
+
+  <rect x="375" y="150" width="230" height="135" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="420" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#14532d">문자 단위</text>
+  <text x="437" y="228" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Reader</text>
+  <text x="437" y="255" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Writer</text>
+
+  <rect x="690" y="150" width="230" height="135" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="735" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#92400e">필터 기능</text>
+  <text x="725" y="228" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">BufferedReader</text>
+  <text x="725" y="255" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">ObjectOutputStream</text>
+
+  <line x1="288" y1="218" x2="365" y2="218" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="300" y="200" font-family="Arial, sans-serif" font-size="14" fill="#334155">문자로 변환</text>
+
+  <rect x="252" y="340" width="475" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="285" y="367" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">텍스트는 Reader/Writer, 객체나 바이너리는 Stream 계열을 떠올린다.</text>
+</svg>
