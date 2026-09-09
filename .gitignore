@@ -2,6 +2,8 @@
 *.class
 *.jar
 *.war
+out/
+*/out/
 
 # Gradle
 .gradle/
