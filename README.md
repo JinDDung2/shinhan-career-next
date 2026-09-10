@@ -6,3 +6,4 @@
 - [day2](daily-log/day2.md): Java 생성자, 문자열 비교, 상속, `super`, 추상 클래스, 다형성, 동적 바인딩, 형변환 개념을 학습
 - [day3](daily-log/day3.md): Java 패키지, 접근 제어자, `final`, 인터페이스, 예외 처리, 컬렉션, 제네릭 개념을 학습
 - [day4](daily-log/day4.md): Java 컬렉션, 람다, Stream API, I/O, 직렬화 개념을 학습
+- [day6](daily-log/day6.md): Java 스레드, `Runnable`, `join`, `sleep`, `interrupt`, `synchronized`와 공유 자원 동기화 개념을 학습
