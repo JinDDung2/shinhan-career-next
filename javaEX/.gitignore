@@ -1,0 +1,5 @@
+# Keep the Gradle Wrapper JAR despite the parent repository's *.jar rule.
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local source archive, not needed for the build.
+/src/minipjt01/board.zip
