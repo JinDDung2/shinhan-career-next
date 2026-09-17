@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭 메뉴 실습 4단계</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        font-size: 0.75em;
+        color: #333;
+      }
+
+      .tab-box {
+        margin: 20px auto 0;
+        width: 520px;
+      }
+
+      .tab-box > ul {
+        list-style-type: none;
+        height: 27px;
+      }
+
+      .tab-box > ul > li {
+        float: right;
+        width: 100px;
+        height: 22px;
+        border: 1px solid #999;
+        background-color: #ccc;
+        margin-right: 2px;
+        text-align: center;
+        padding-top: 3px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .tab-view {
+        width: 520px;
+        border: 1px solid #595959;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab-box">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+      </ul>
+      <div class="tab-view">탭뷰입니다.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+@media screen and (min-width:768px) and (max-width:840px) {
+    h2 { 
+        background-color:#f00;      
+    }
+}
+@media screen and (min-width:810px) {
+    h2 { 
+        background-color:#ff0;      
+    } 
+}

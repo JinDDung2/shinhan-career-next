@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #login-form {
+        width: 180px;
+        height: 120px;
+        padding: 10px;
+        border: 1px solid #666;
+        border-radius: 10px;
+        margin: 0 auto;
+      }
+
+      body {
+        font-family: sans-serif;
+        font-size: 0.75em;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin: 5px 0 3px;
+      }
+
+      input {
+        display: block;
+        margin: 0 0 5px;
+        font: inherit;
+        color: inherit;
+      }
+      input[type="submit"] {
+        margin: 8px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="login-form">
+      <label for="username">아이디</label>
+      <input type="text" id="username" />
+      <label for="password">패스워드</label>
+      <input type="password" id="password" />
+      <input type="submit" value="로그인" />
+    </form>
+  </body>
+</html>
