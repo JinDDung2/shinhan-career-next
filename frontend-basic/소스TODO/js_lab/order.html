@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>주문</title>
+    <script>
+      var total = 0;
+
+      /* 초기화 버튼을 누르면 다른 메뉴 버튼들은 체크 안되게 */
+      function onResetClick() {
+        var reset = document.getElementById("reset");
+        if (reset.checked) {
+          document.getElementById("jjajang").checked = false;
+          document.getElementById("jjambbong").checked = false;
+        }
+      }
+
+      /* 메뉴 버튼 중 최소 1개 누르면 초기화 버튼은 체크 안되게 */
+      function onMenuClick() {
+        var jjajang = document.getElementById("jjajang");
+        var jjambbong = document.getElementById("jjambbong");
+        if (jjajang.checked || jjambbong.checked) {
+          document.getElementById("reset").checked = false;
+        }
+      }
+
+      function submitOrder() {
+        var jjajang = document.getElementById("jjajang");
+        var jjambbong = document.getElementById("jjambbong");
+        var reset = document.getElementById("reset");
+
+        if (reset.checked) {
+          total = 0;
+        } else {
+          if (jjajang.checked) total += 500;
+          if (jjambbong.checked) total += 700;
+        }
+
+        reset.checked = false;
+        jjajang.checked = false;
+        jjambbong.checked = false;
+
+        document.getElementById("totalArea").innerText =
+          "총 매출: " + total + "원";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>주문</h1>
+
+    <div id="totalArea"></div>
+
+    <input
+      type="checkbox"
+      id="jjajang"
+      onclick="onMenuClick()"
+    />짜장면(500)<br />
+    <input
+      type="checkbox"
+      id="jjambbong"
+      onclick="onMenuClick()"
+    />짬뽕(700)<br />
+    <input type="checkbox" id="reset" onclick="onResetClick()" />초기화<br />
+
+    <button type="button" onclick="submitOrder()">submit</button>
+  </body>
+</html>

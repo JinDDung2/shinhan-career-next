@@ -1,0 +1,162 @@
+<!-- 문제 : 메뉴에 마우스를 올리면 submenu 가 보이도록 합니다.  -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          "맑은 고딕", "Malgun Gothic", "돋움", Helvetica, sans-serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        background: #c5e9fe;
+      }
+      .container.yellow-bg {
+        background: #fff6d5;
+      }
+      .wrap-visual {
+        height: 500px;
+        width: 70%;
+        display: grid;
+      }
+      #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        padding: 10px 0 0 0;
+      }
+      ul {
+        list-style-type: none;
+        height: 27px;
+      }
+      li {
+        float: left;
+        width: 100px;
+        height: 22px;
+        margin-right: 2px;
+      }
+      li:hover,
+      #next {
+        cursor: pointer;
+      }
+      .submenu {
+        margin: 10px 10px 10px -30px;
+        padding: 10px 0 0 10px;
+        background-color: white;
+        width: 100px;
+        height: 100px;
+      }
+      img {
+        margin: 0 auto;
+      }
+      #next {
+        background: inherit;
+        border: 0;
+      }
+
+      #second {
+        display: none;
+      }
+      .menu li > * {
+        display: none;
+      }
+      .menu li:hover > .submenu {
+        display: block;
+      }
+      .submenu li {
+        float: none;
+        width: auto;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap-visual">
+        <div id="menu">
+          <nav>
+            <ul class="menu">
+              <li>
+                개인
+                <ul class="submenu">
+                  <li>조회</li>
+                  <li>이체</li>
+                  <li>공과금</li>
+                </ul>
+              </li>
+              <li>
+                기업
+                <ul class="submenu">
+                  <li>마이페이지</li>
+                  <li>조회</li>
+                  <li>이체</li>
+                </ul>
+              </li>
+              <li>
+                금융상품
+                <ul class="submenu">
+                  <li>submenu</li>
+                  <li>submenu</li>
+                  <li>submenu</li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div id="first">
+          <strong
+            ><img
+              src="https://www.kbstar.com/2018/img/visual/visual_section89_tit01.png"
+              alt="개인고객은 물론, 개인사업자까지 누구나 타행이체 수수료 면제"
+          /></strong>
+          <span
+            ><img
+              src="https://www.kbstar.com/2018/img/visual/visual_section89_tit02.png"
+              alt="KB스타뱅킹·인터넷뱅킹으로 타행이체, 자동이체 수수료 걱정 끝"
+          /></span>
+        </div>
+        <div id="second">
+          <strong
+            ><img
+              src="https://www.kbstar.com/2018/img/visual/visual_section100_tit01.png"
+              alt="오늘은 취준, 내일은 출근 2023 제1차 KB굿잡 우수기업 취업박람회"
+          /></strong>
+          <span
+            ><img
+              src="https://www.kbstar.com/2018/img/visual/visual_section100_tit02.png"
+              alt="2023.5.22(월)~5.23(화), 10:00~17:00 서울 COEX B홀"
+          /></span>
+        </div>
+        <br />
+        <button id="next">다음</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    var nextBtn = document.getElementById("next");
+    var first = document.getElementById("first");
+    var second = document.getElementById("second");
+    var container = document.querySelector(".container");
+
+    nextBtn.addEventListener("click", function () {
+      if (first.style.display === "none") {
+        first.style.display = "block";
+        second.style.display = "none";
+        container.classList.remove("yellow-bg");
+      } else {
+        first.style.display = "none";
+        second.style.display = "block";
+        container.classList.add("yellow-bg");
+      }
+    });
+  </script>
+</html>

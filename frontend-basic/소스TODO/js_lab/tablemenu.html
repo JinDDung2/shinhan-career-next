@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: sans-serif;
+        font-size: 0.75em;
+        color: #333;
+      }
+      .tab-box {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 520px;
+        text-align: center;
+        padding-top: 3px;
+      }
+      ul {
+        list-style-type: none;
+        height: 27px;
+      }
+      li {
+        float: left;
+        width: 100px;
+        height: 22px;
+        border: 1px;
+        border-style: solid;
+        border-color: #999;
+        background-color: #ccc;
+        margin-right: 2px;
+        border-radius: 10px 10px 0 0;
+      }
+      .tab-view {
+        width: 520px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #595959;
+        margin-top: -1px;
+        text-align: left;
+        line-height: 20px;
+      }
+      li:hover {
+        background-color: orange;
+      }
+    </style>
+
+    <script>
+      //이곳에 프로그램을 완성하세요.
+      window.onload = function () {
+        var menus = document.querySelectorAll(".tab-box > ul > li");
+        var contents = document.querySelectorAll(".tab-view");
+
+        function showTab(index) {
+          for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = i === index ? "block" : "none";
+          }
+        }
+
+        for (var i = 0; i < menus.length; i++) {
+          menus[i].addEventListener(
+            "click",
+            (function (index) {
+              return function () {
+                showTab(index);
+              };
+            })(i),
+          );
+        }
+
+        showTab(0);
+      };
+    </script>
+  </head>
+  <body>
+    <div class="tab-box">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li>메뉴5</li>
+      </ul>
+
+      <div class="tab-view" id="menu1Content">
+        <!--메뉴1  클릭 나와야 하는 내용. 그리고, 처음 화면 로드시 나와야하는 내용 -->
+        <div class="tab-content">
+          <h3>여행 전문가도 모르는 비행기 속 숨은 비밀 3가지</h3>
+          <hr />
+          <p>
+            검은 삼각형·창문에 난 구멍·비행기 좌석 옷걸이 [한겨레] 항공 여객
+            연인원 1억명 시대다. 국토교통부 통계를 보면, 2016년 항공 여객
+            연인원은 1억391만명이었다. 단순 계산을 하면, 한국인 1인당 1년에 두
+            차례 비행기 여행을 떠난다는 얘기다. 그럼에도 항상 비행기에 대한
+            이야기는 새롭다. 곳곳에 안전과 효율을 중시하는 섬세함이 숨어있기
+            때문이다. 아무 설명 없이 붙어있는 삼각형의 스티커, 기내 객실 창문에
+            있는 작은 구멍, 트레이를 고정하는 고리 등 그 용도가 궁금한 항공기의
+            숨겨진 ‘비밀’들을 자세히 살펴봤다. 1. 검은 삼각형이 붙은 자리의
+            의미는?
+          </p>
+        </div>
+      </div>
+      <div class="tab-view" id="menu2Content">
+        <!--메뉴2  클릭 나와야 하는 내용.  -->
+        <div class="tab-content">
+          <h3>'기억의 밤', 역대급 서스펜스 담은 스틸 11종 공개</h3>
+          <hr />
+          <p>
+            영화 ‘기억의 밤’이 미공개 스틸을 공개했다. 8일 공개된 ‘기억의 밤’
+            보도스틸은 이사 온 날 새 집을 바라보는 단란한 가족의 모습이
+            담겨있다. 특히 빗속에서 동생 진석(강하늘 분)을 의미심장하게 바라보는
+            형 유석(김무열 분)의 눈빛과 의문의 괴한들에게 납치를 당한 뒤 기억을
+            잃고 돌아온 형의 모습을 통해 형제에게 심상치 않은 이야기가 전개될
+            것이라는 예상을 안겨준다. 낯설게 변해버린 형의 진짜 정체에 대한
+            의심을 품은 진석과 어딘가 비밀을 간직하고 있는 듯한 유석의 모습이
+            묘한 대립을 이루며 형제의 관계는 새로운 전환점을 맞이한다.
+          </p>
+        </div>
+      </div>
+      <div class="tab-view" id="menu3Content"><h3>menu3 탭뷰입니다.</h3></div>
+      <!--메뉴3  클릭 나와야 하는 내용.  -->
+      <div class="tab-view" id="menu4Content"><h3>menu4 탭뷰입니다.</h3></div>
+      <!--메뉴4  클릭 나와야 하는 내용.  -->
+      <div class="tab-view" id="menu5Content"><h3>menu5 탭뷰입니다.</h3></div>
+      <!--메뉴5  클릭 나와야 하는 내용.  -->
+    </div>
+  </body>
+</html>
