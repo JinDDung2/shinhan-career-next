@@ -1,0 +1,34 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "grade": 11,
+      "marks": {
+        "maths": 90,
+        "physics": 20,
+        "chemistry": 90
+      }
+    },
+    {
+      "id": 2,
+      "name": "Sam Smith",
+      "grade": 12,
+      "marks": {
+        "maths": 100,
+        "physics": 20,
+        "chemistry": 90
+      }
+    }
+  ],
+  "teachers": [
+    {
+      "id": 2,
+      "name": "김길동"
+    },
+    {
+      "id": 3,
+      "name": "이길동"
+    }
+  ]
+}
