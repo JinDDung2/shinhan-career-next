@@ -1,0 +1,68 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "alex",
+      "grade": 11,
+      "marks": {
+        "maths": "80",
+        "physics": 50,
+        "chemistry": 35
+      }
+    },
+    {
+      "id": "2",
+      "name": "gary",
+      "grade": 12,
+      "marks": {
+        "maths": 70,
+        "physics": 50,
+        "chemistry": 65
+      }
+    },
+    {
+      "id": "3",
+      "name": "stuart",
+      "grade": 11,
+      "marks": {
+        "maths": 80,
+        "physics": 20,
+        "chemistry": 90
+      }
+    },
+    {
+      "name": "qwer",
+      "grade": 12,
+      "marks": {
+        "maths": 100,
+        "physics": 100,
+        "chemistry": 100
+      },
+      "id": "rzhW_nxyfQw"
+    }
+  ],
+  "logs": [
+    {
+      "message": "Changed network card in server 007",
+      "attention": false,
+      "tech": "Sam Smith",
+      "date": "2019-05-31T15:46:10.179Z",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "message": "Workstation 007 not posting",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2019-05-31T16:18:04.245Z"
+    },
+    {
+      "message": "Changedmemo station 050",
+      "attention": true,
+      "tech": "Sara Wilson",
+      "date": "2019-05-31T15:46:48.690Z",
+      "id": "3"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
