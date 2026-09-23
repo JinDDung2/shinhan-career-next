@@ -7,6 +7,7 @@ import boardsRouter from "./routes/boards.js";
 import { boardCommentsRouter, commentRouter } from "./routes/comments.js";
 
 const PORT = process.env.PORT || 4000;
+const HOST = process.env.HOST || "localhost";
 
 const app = express();
 app.use(cors({ origin: true, credentials: true }));
@@ -28,6 +29,6 @@ app.get("/api/health", (_req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`json-server-board API listening on http://localhost:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`json-server-board API listening on http://${HOST}:${PORT}`);
 });
