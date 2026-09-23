@@ -197,6 +197,69 @@ const boards = [
   },
 ];
 
+// 게시글 수량 확인용으로 16~50번은 주제 목록 + 템플릿 조합으로 생성한다.
+const EXTRA_TOPICS = [
+  "인적분할 이슈 어떻게 보세요",
+  "R&D 투자 규모 정리",
+  "노조 임단협 소식",
+  "ESG 경영 관련 공시",
+  "AI 반도체 수요 전망",
+  "메모리 가격 반등 조짐",
+  "TSMC와 점유율 비교",
+  "미국 반도체법 영향 분석",
+  "인력 구조조정 뉴스",
+  "차세대 공정 로드맵",
+  "주가 조정 구간 매수 타이밍",
+  "저PBR 매력 부각",
+  "기관 매수세 유입",
+  "공매도 잔고 변화",
+  "실적 컨센서스 상회 여부",
+  "신제품 출시 일정",
+  "특허 소송 이슈",
+  "환경 규제 대응 현황",
+  "해외 공장 증설 소식",
+  "신용등급 관련 뉴스",
+  "주식 분할 가능성",
+  "임원 인사 발표",
+  "협력사 공급 계약 체결",
+  "채용 규모 확대 소식",
+  "지수 편입 비중 변화",
+  "베타 지수 관련 질문",
+  "밸류업 프로그램 참여",
+  "금리 인하가 주가에 미칠 영향",
+  "옵션 만기일 변동성 주의",
+  "실적 발표 컨퍼런스콜 요약",
+  "신규 상장 자회사 이슈",
+  "탄소중립 투자 계획",
+  "글로벌 반도체 수요 회복세",
+  "리스크 요인 점검해봐요",
+  "커뮤니티 운영 관련 건의사항",
+];
+
+const CONTENT_TEMPLATES = [
+  (topic) => `${topic} 관련해서 다들 어떻게 보고 계신가요? 의견 나눠요.`,
+  (topic) => `${topic} 얘기가 나와서 정리해봤습니다. 참고하세요.`,
+  (topic) => `${topic}에 대해 궁금한 점이 있어서 질문 남겨요.`,
+  (topic) => `오늘 ${topic} 관련 뉴스 보고 생각나서 글 남깁니다.`,
+];
+
+EXTRA_TOPICS.forEach((topic, idx) => {
+  const template = CONTENT_TEMPLATES[idx % CONTENT_TEMPLATES.length];
+  boards.push({
+    id: 16 + idx,
+    memberId: (idx % 3) + 1,
+    title: topic,
+    content: template(topic),
+    viewCount: (idx * 7 + 3) % 40,
+    createdAt: now(45 + idx * 3),
+    updatedAt: now(45 + idx * 3),
+    isDeleted: false,
+    deletedAt: null,
+  });
+});
+
+// 기본 댓글 4개(질문/답변 형태로 직접 작성)에 이어, 일부 게시글에만 댓글이 몰리도록
+// 나머지는 계획(commentPlan)에 따라 생성해 "댓글 없는 글/3~4개인 글"이 섞이게 한다.
 const comments = [
   { id: 1, boardId: 1, memberId: 2, content: "저도 기대하고 있습니다. 목표가 9만원 정도 보고 있어요.", createdAt: now(-85), isDeleted: false, deletedAt: null },
   { id: 2, boardId: 1, memberId: 3, content: "메모리 업사이클 초입이라는 의견이 많더라고요.", createdAt: now(-84), isDeleted: false, deletedAt: null },
@@ -204,9 +267,57 @@ const comments = [
   { id: 4, boardId: 4, memberId: 3, content: "수급 좋네요, 저도 체크하고 있었습니다.", createdAt: now(-29), isDeleted: false, deletedAt: null },
 ];
 
+const REPLY_TEXTS = [
+  "좋은 정보 감사합니다.",
+  "저도 같은 생각이에요.",
+  "흥미로운 관점이네요.",
+  "데이터 출처가 궁금해요.",
+  "동의합니다, 저도 지켜보고 있어요.",
+  "생각해볼 만한 포인트네요.",
+  "참고할게요, 감사합니다.",
+  "저는 조금 다르게 보고 있어요.",
+  "실적 발표 전까지는 지켜봐야 할 것 같아요.",
+  "좋은 글 잘 봤습니다.",
+];
+
+const commentPlan = [
+  { boardId: 1, count: 1 },
+  { boardId: 3, count: 2 },
+  { boardId: 5, count: 1 },
+  { boardId: 7, count: 4 },
+  { boardId: 11, count: 2 },
+  { boardId: 13, count: 1 },
+  { boardId: 16, count: 3 },
+  { boardId: 20, count: 1 },
+  { boardId: 22, count: 2 },
+  { boardId: 25, count: 4 },
+  { boardId: 28, count: 1 },
+  { boardId: 31, count: 2 },
+  { boardId: 35, count: 1 },
+  { boardId: 40, count: 1 },
+];
+
+let nextCommentId = comments.length + 1;
+
+commentPlan.forEach(({ boardId, count }) => {
+  for (let i = 0; i < count; i += 1) {
+    comments.push({
+      id: nextCommentId,
+      boardId,
+      memberId: ((boardId + i) % 3) + 1,
+      content: REPLY_TEXTS[(boardId + i) % REPLY_TEXTS.length],
+      createdAt: now(boardId + i),
+      isDeleted: false,
+      deletedAt: null,
+    });
+    nextCommentId += 1;
+  }
+});
+
 const db = { members, boards, comments };
 
 writeFileSync(DB_PATH, JSON.stringify(db, null, 2) + "\n", "utf-8");
 
 console.log(`시드 데이터 생성 완료: ${DB_PATH}`);
+console.log(`게시글 ${boards.length}개, 댓글 ${comments.length}개`);
 console.log("로그인 테스트 계정: samsung1 / samsung2 / samsung3, 비밀번호 공통 Passw0rd!");
