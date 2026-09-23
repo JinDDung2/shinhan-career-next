@@ -3,27 +3,27 @@
     {
       "id": 1,
       "loginId": "samsung1",
-      "password": "$2b$10$2LsOOFmeTLA8Yc9z4xrWJO5o.xarkGLYot77SCHfvbkbq.TS7WmUC",
-      "nickname": "예민한 갈매기",
-      "createdAt": "2026-09-22T21:40:42.322Z",
+      "password": "$2b$10$uBDn6V4ztWYle4eCMe9zeemXId1Sxog3monbkVEgEqFQsL0Djdtp2",
+      "nickname": "푸근한 개미",
+      "createdAt": "2026-09-22T22:32:58.115Z",
       "isDeleted": false,
       "deletedAt": null
     },
     {
       "id": 2,
       "loginId": "samsung2",
-      "password": "$2b$10$.MihiYMD6EGyIfnWOIoj6OwpPrpo0EooXqczOKAWDQbAQIzaSN7Uq",
-      "nickname": "성숙한 카나리아",
-      "createdAt": "2026-09-22T23:20:42.391Z",
+      "password": "$2b$10$9PqI.isiJXyWcPZMcLI2Sek0rv.zjBenqRDt1UUnj4Evziw0vJmGy",
+      "nickname": "귀여운 개코원숭이",
+      "createdAt": "2026-09-23T00:12:58.190Z",
       "isDeleted": false,
       "deletedAt": null
     },
     {
       "id": 3,
       "loginId": "samsung3",
-      "password": "$2b$10$C41Vff6mcIAItuYOdVejA.OP9ot9x6ajZyPKXlk10C9c49dX40qWK",
-      "nickname": "근면한 두루미",
-      "createdAt": "2026-09-23T01:00:42.458Z",
+      "password": "$2b$10$0FEAMGdzl0E0fsCqw647fOqAzl/BchMZ.wgatdpCK.PDFPkh7Fcxi",
+      "nickname": "단단한 실잠자리",
+      "createdAt": "2026-09-23T01:52:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     }
@@ -35,8 +35,8 @@
       "title": "삼성전자 3분기 실적 어떻게 보세요?",
       "content": "어제 발표된 잠정 실적 보니 메모리 반등이 확실히 보이네요. 다들 목표가 어느 정도로 잡으시나요?",
       "viewCount": 12,
-      "createdAt": "2026-09-23T01:10:42.458Z",
-      "updatedAt": "2026-09-23T01:10:42.458Z",
+      "createdAt": "2026-09-23T02:02:58.262Z",
+      "updatedAt": "2026-09-23T02:02:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     },
@@ -46,8 +46,8 @@
       "title": "HBM 점유율 관련 뉴스 정리",
       "content": "최근 HBM4 관련 로드맵 기사 모아봤습니다. 경쟁사 대비 진행 속도가 궁금하네요.",
       "viewCount": 8,
-      "createdAt": "2026-09-23T01:20:42.458Z",
-      "updatedAt": "2026-09-23T01:20:42.458Z",
+      "createdAt": "2026-09-23T02:12:58.262Z",
+      "updatedAt": "2026-09-23T02:12:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     },
@@ -57,8 +57,8 @@
       "title": "배당 기준일 다가오는데 다들 어떻게 대응하세요",
       "content": "이번 분기도 배당 챙기고 갈지, 아니면 다른 종목으로 옮길지 고민 중입니다.",
       "viewCount": 5,
-      "createdAt": "2026-09-23T01:40:42.458Z",
-      "updatedAt": "2026-09-23T01:40:42.458Z",
+      "createdAt": "2026-09-23T02:32:58.262Z",
+      "updatedAt": "2026-09-23T02:32:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     },
@@ -68,8 +68,8 @@
       "title": "외국인 수급 동향 공유",
       "content": "최근 5거래일 연속 순매수 중이네요. 수급만 보면 나쁘지 않은 흐름입니다.",
       "viewCount": 20,
-      "createdAt": "2026-09-23T02:10:42.458Z",
-      "updatedAt": "2026-09-23T02:10:42.458Z",
+      "createdAt": "2026-09-23T03:02:58.262Z",
+      "updatedAt": "2026-09-23T03:02:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     },
@@ -79,8 +79,8 @@
       "title": "장기 보유 vs 단기 매매, 여러분의 전략은?",
       "content": "저는 3년 이상 보고 모아가는 중인데 다른 분들 전략도 궁금합니다.",
       "viewCount": 3,
-      "createdAt": "2026-09-23T02:30:42.458Z",
-      "updatedAt": "2026-09-23T02:30:42.458Z",
+      "createdAt": "2026-09-23T03:22:58.262Z",
+      "updatedAt": "2026-09-23T03:22:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     }
@@ -91,7 +91,7 @@
       "boardId": 1,
       "memberId": 2,
       "content": "저도 기대하고 있습니다. 목표가 9만원 정도 보고 있어요.",
-      "createdAt": "2026-09-23T01:15:42.458Z",
+      "createdAt": "2026-09-23T02:07:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     },
@@ -100,7 +100,7 @@
       "boardId": 1,
       "memberId": 3,
       "content": "메모리 업사이클 초입이라는 의견이 많더라고요.",
-      "createdAt": "2026-09-23T01:16:42.458Z",
+      "createdAt": "2026-09-23T02:08:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     },
@@ -109,7 +109,7 @@
       "boardId": 2,
       "memberId": 1,
       "content": "좋은 정리 감사합니다!",
-      "createdAt": "2026-09-23T01:21:42.458Z",
+      "createdAt": "2026-09-23T02:13:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     },
@@ -118,7 +118,7 @@
       "boardId": 4,
       "memberId": 3,
       "content": "수급 좋네요, 저도 체크하고 있었습니다.",
-      "createdAt": "2026-09-23T02:11:42.458Z",
+      "createdAt": "2026-09-23T03:03:58.262Z",
       "isDeleted": false,
       "deletedAt": null
     }
