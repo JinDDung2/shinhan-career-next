@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { deleteBoard, getBoard } from "../api/boards";
 import { useAuth } from "../context/AuthContext";
+import CommentSection from "./CommentSection";
 
 export default function BoardDetailPage() {
   const { id } = useParams();
@@ -66,6 +67,8 @@ export default function BoardDetailPage() {
       <Link to="/" className="back-link">
         목록으로
       </Link>
+
+      <CommentSection boardId={board.id} />
     </div>
   );
 }
