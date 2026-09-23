@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { listBoards } from "../api/boards";
 
@@ -7,6 +7,7 @@ export default function BoardListPage() {
   const [nextCursor, setNextCursor] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const sentinelRef = useRef(null);
 
   useEffect(() => {
     listBoards()
@@ -18,7 +19,7 @@ export default function BoardListPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const loadMore = async () => {
+  const loadMore = useCallback(async () => {
     setLoading(true);
     try {
       const data = await listBoards({ cursor: nextCursor });
@@ -29,7 +30,23 @@ export default function BoardListPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [nextCursor]);
+
+  useEffect(() => {
+    if (!sentinelRef.current || nextCursor == null) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMore();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(sentinelRef.current);
+    return () => observer.disconnect();
+  }, [nextCursor, loadMore]);
 
   return (
     <div className="page">
@@ -59,11 +76,10 @@ export default function BoardListPage() {
 
       {items.length === 0 && !loading && <p className="empty">등록된 글이 없어요.</p>}
 
-      {nextCursor != null && (
-        <button type="button" className="btn-secondary load-more" onClick={loadMore} disabled={loading}>
-          {loading ? "불러오는 중..." : "더보기"}
-        </button>
-      )}
+      <div ref={sentinelRef} className="scroll-sentinel">
+        {loading && items.length > 0 && <p className="loading-more">불러오는 중...</p>}
+        {nextCursor == null && items.length > 0 && <p className="end-of-list">마지막 글이에요.</p>}
+      </div>
     </div>
   );
 }

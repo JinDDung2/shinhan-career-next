@@ -229,10 +229,18 @@ h1 {
   border-top: none;
 }
 
-.load-more {
-  display: block;
-  width: 100%;
-  margin-top: 16px;
+.scroll-sentinel {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.loading-more,
+.end-of-list {
+  color: var(--text-muted);
+  font-size: 13px;
 }
 
 /* board detail */
