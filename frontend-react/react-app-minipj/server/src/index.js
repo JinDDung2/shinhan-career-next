@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { readDb } from "./db.js";
 import authRouter from "./routes/auth.js";
+import boardsRouter from "./routes/boards.js";
 
 const PORT = process.env.PORT || 4000;
 
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", authRouter);
+app.use("/api/boards", boardsRouter);
 
 app.get("/api/health", (_req, res) => {
   const db = readDb();

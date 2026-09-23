@@ -5,7 +5,7 @@ import path from "node:path";
 import { generateUniqueNickname } from "./nickname.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DB_PATH = path.join(__dirname, "..", "db", "db.json");
+const DB_PATH = path.join(__dirname, "..", "..", "..", "json-server-board", "db", "db.json");
 
 const now = (offsetMinutes = 0) =>
   new Date(Date.now() + offsetMinutes * 60_000).toISOString();

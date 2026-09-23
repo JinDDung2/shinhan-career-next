@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DB_PATH = path.join(__dirname, "..", "db", "db.json");
+const DB_PATH = path.join(__dirname, "..", "..", "..", "json-server-board", "db", "db.json");
 
 export function readDb() {
   return JSON.parse(readFileSync(DB_PATH, "utf-8"));

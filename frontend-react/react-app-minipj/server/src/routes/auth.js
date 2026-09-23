@@ -4,15 +4,12 @@ import { readDb, writeDb } from "../db.js";
 import { validateLoginId, validatePassword } from "../validators.js";
 import { generateUniqueNickname } from "../nickname.js";
 import { issueToken, setAuthCookie, clearAuthCookie, requireAuth } from "../auth.js";
+import { nextId } from "../nextId.js";
 
 const router = Router();
 
 function toPublicMember(member) {
   return { id: member.id, loginId: member.loginId, nickname: member.nickname, createdAt: member.createdAt };
-}
-
-function nextId(list) {
-  return list.reduce((max, item) => Math.max(max, item.id), 0) + 1;
 }
 
 router.post("/signup", (req, res) => {
