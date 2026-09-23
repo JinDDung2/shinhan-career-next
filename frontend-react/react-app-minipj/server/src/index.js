@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import { readDb } from "./db.js";
 import authRouter from "./routes/auth.js";
 import boardsRouter from "./routes/boards.js";
+import { boardCommentsRouter, commentRouter } from "./routes/comments.js";
 
 const PORT = process.env.PORT || 4000;
 
@@ -14,6 +15,8 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRouter);
 app.use("/api/boards", boardsRouter);
+app.use("/api/boards/:boardId/comments", boardCommentsRouter);
+app.use("/api/comments", commentRouter);
 
 app.get("/api/health", (_req, res) => {
   const db = readDb();
