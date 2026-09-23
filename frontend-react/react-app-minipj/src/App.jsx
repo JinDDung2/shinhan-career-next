@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import BoardDetailPage from "./pages/BoardDetailPage";
-import BoardFormPage from "./pages/BoardFormPage";
-import BoardListPage from "./pages/BoardListPage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+import BoardDetailPage from "./components/BoardDetailPage";
+import BoardFormPage from "./components/BoardFormPage";
+import BoardListPage from "./components/BoardListPage";
+import LoginPage from "./components/LoginPage";
+import SignupPage from "./components/SignupPage";
 
 function App() {
   return (
