@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import { readDb, writeDb } from "../db.js";
 import { validateLoginId, validatePassword } from "../validators.js";
 import { generateUniqueNickname } from "../nickname.js";
-import { issueToken, setAuthCookie, clearAuthCookie, requireAuth } from "../auth.js";
+import { issueToken, setAuthCookie, clearAuthCookie, requireAuth } from "../authUtils.js";
 import { nextId } from "../nextId.js";
 
 const router = Router();

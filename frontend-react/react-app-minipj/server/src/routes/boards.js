@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { readDb, writeDb } from "../db.js";
-import { requireAuth } from "../auth.js";
+import { requireAuth } from "../authUtils.js";
 import { nextId } from "../nextId.js";
 
 const router = Router();
