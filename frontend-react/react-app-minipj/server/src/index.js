@@ -1,16 +1,13 @@
 import express from "express";
-import cors from "cors";
 import cookieParser from "cookie-parser";
 import { readDb } from "./db.js";
 import authRouter from "./routes/auth.js";
 import boardsRouter from "./routes/boards.js";
 import { boardCommentsRouter, commentRouter } from "./routes/comments.js";
 
-const PORT = process.env.PORT || 4000;
-const HOST = process.env.HOST || "localhost";
+const PORT = 4000;
 
 const app = express();
-app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -29,6 +26,6 @@ app.get("/api/health", (_req, res) => {
   });
 });
 
-app.listen(PORT, HOST, () => {
-  console.log(`json-server-board API listening on http://${HOST}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`API server listening on http://localhost:${PORT} (Vite에서 /api로 프록시됨)`);
 });
