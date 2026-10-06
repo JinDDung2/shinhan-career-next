@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">세션 기반 인증과 JWT 기반 인증</title>
+<desc id="desc">로그인 이후 요청에서 인증 정보를 확인하고 유지하는 방식의 차이. 세션 기반 — 서버의 인증 상태 조회: 세션 ID 전달 → 세션 저장소 조회 → 인가 및 업무 처리. JWT 기반 — 실습 구현의 요청별 검증: Bearer JWT 전달 → 서명·만료 검증 → 인가 및 업무 처리. Stateless는 서버 세션에 인증 상태를 유지하지 않는다는 의미다. 즉시 폐기·권한 변경 반영은 별도 정책이 필요하다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="600" fill="#f8fafc"/>
+<g font-family="Apple SD Gothic Neo, Malgun Gothic, Arial, sans-serif" fill="#0f172a">
+<rect x="40" y="32" width="5" height="60" fill="#2563eb"/>
+<text x="62" y="56" font-size="28" font-weight="700">세션 기반 인증과 JWT 기반 인증</text>
+<text x="62" y="88" font-size="18" fill="#475569">로그인 이후 요청에서 인증 정보를 확인하고 유지하는 방식의 차이</text>
+<text x="40" y="144" font-size="17" font-weight="700" fill="#334155">세션 기반 — 서버의 인증 상태 조회</text>
+<rect x="40" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="164" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="200" font-size="21" font-weight="700">세션 ID 전달</text>
+<text x="58" y="234" font-size="18">일반적으로 쿠키로 자동 전송</text>
+<text x="58" y="267" font-size="16" fill="#475569">클라이언트는 세션 식별자 보유</text>
+<path d="M393 228 H419" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="426" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="164" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="200" font-size="21" font-weight="700">세션 저장소 조회</text>
+<text x="444" y="234" font-size="18">ID에 대응하는 인증 정보 확인</text>
+<text x="444" y="267" font-size="16" fill="#475569">메모리 / 공유 저장소 등</text>
+<path d="M779 228 H805" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="812" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="164" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="200" font-size="21" font-weight="700">인가 및 업무 처리</text>
+<text x="830" y="234" font-size="18">조회한 사용자·권한으로 판단</text>
+<text x="830" y="267" font-size="16" fill="#475569">세션 무효화로 인증 상태 폐기</text>
+<text x="40" y="328" font-size="17" font-weight="700" fill="#334155">JWT 기반 — 실습 구현의 요청별 검증</text>
+<rect x="40" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="348" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="384" font-size="21" font-weight="700">Bearer JWT 전달</text>
+<text x="58" y="418" font-size="18">Authorization 헤더에 첨부</text>
+<text x="58" y="451" font-size="16" fill="#475569">클라이언트가 직접 전달</text>
+<path d="M393 412 H419" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="426" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="348" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="384" font-size="21" font-weight="700">서명·만료 검증</text>
+<text x="444" y="418" font-size="18">claim에서 Authentication 복원</text>
+<text x="444" y="451" font-size="16" fill="#475569">토큰 인증 단계의 DB 조회 없음</text>
+<path d="M779 412 H805" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="812" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="348" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="384" font-size="21" font-weight="700">인가 및 업무 처리</text>
+<text x="830" y="418" font-size="18">토큰의 사용자·권한으로 판단</text>
+<text x="830" y="451" font-size="16" fill="#475569">업무 DB 조회는 별도로 수행 가능</text>
+<line x1="40" y1="522" x2="1160" y2="522" stroke="#cbd5e1"/>
+<text x="40" y="558" font-size="17" fill="#475569">Stateless는 서버 세션에 인증 상태를 유지하지 않는다는 의미다. 즉시 폐기·권한 변경 반영은 별도 정책이 필요하다.</text>
+</g></svg>

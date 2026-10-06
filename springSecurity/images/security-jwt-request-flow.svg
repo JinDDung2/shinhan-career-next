@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">JWT 실습: 로그인과 보호 API 처리</title>
+<desc id="desc">DB 인증은 토큰 발급 시, JWT 검증은 보호된 API 요청마다 수행한다.. 로그인 — POST /api/auth/login: AuthController → AuthenticationManager → JwtProvider. 보호 API — Authorization: Bearer JWT: JwtAuthenticationFilter → 인가 검사 → Controller. 로그인 실패는 AuthController에서 401 처리한다. Refresh Token·재발급·JWT 폐기는 현재 미구현이다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="600" fill="#f8fafc"/>
+<g font-family="Apple SD Gothic Neo, Malgun Gothic, Arial, sans-serif" fill="#0f172a">
+<rect x="40" y="32" width="5" height="60" fill="#2563eb"/>
+<text x="62" y="56" font-size="28" font-weight="700">JWT 실습: 로그인과 보호 API 처리</text>
+<text x="62" y="88" font-size="18" fill="#475569">DB 인증은 토큰 발급 시, JWT 검증은 보호된 API 요청마다 수행한다.</text>
+<text x="40" y="144" font-size="17" font-weight="700" fill="#334155">로그인 — POST /api/auth/login</text>
+<rect x="40" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="164" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="200" font-size="21" font-weight="700">AuthController</text>
+<text x="58" y="234" font-size="18">미인증 Authentication 생성</text>
+<text x="58" y="267" font-size="16" fill="#475569">username + password 수신</text>
+<path d="M393 228 H419" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="426" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="164" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="200" font-size="21" font-weight="700">AuthenticationManager</text>
+<text x="444" y="234" font-size="18">DB 사용자 조회·비밀번호 검증</text>
+<text x="444" y="267" font-size="16" fill="#475569">DaoAuthenticationProvider에 위임</text>
+<path d="M779 228 H805" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="812" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="164" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="200" font-size="21" font-weight="700">JwtProvider</text>
+<text x="830" y="234" font-size="18">Access Token 생성 후 응답</text>
+<text x="830" y="267" font-size="16" fill="#475569">sub / roles / iat / exp + 서명</text>
+<text x="40" y="328" font-size="17" font-weight="700" fill="#334155">보호 API — Authorization: Bearer JWT</text>
+<rect x="40" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="348" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="384" font-size="21" font-weight="700">JwtAuthenticationFilter</text>
+<text x="58" y="418" font-size="18">헤더 추출 → JwtProvider 검증</text>
+<text x="58" y="451" font-size="16" fill="#475569">성공: SecurityContext 설정</text>
+<path d="M393 412 H419" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="426" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="348" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="384" font-size="21" font-weight="700">인가 검사</text>
+<text x="444" y="418" font-size="18">URL 규칙 → 메서드 조건 검사</text>
+<text x="444" y="451" font-size="16" fill="#475569">실패: 인증 없음 401 / 권한 없음 403</text>
+<path d="M779 412 H805" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="812" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="348" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="384" font-size="21" font-weight="700">Controller</text>
+<text x="830" y="418" font-size="18">허용된 요청의 업무 처리</text>
+<text x="830" y="451" font-size="16" fill="#475569">/api/me 등은 업무 DB 조회 수행</text>
+<line x1="40" y1="522" x2="1160" y2="522" stroke="#cbd5e1"/>
+<text x="40" y="558" font-size="17" fill="#475569">로그인 실패는 AuthController에서 401 처리한다. Refresh Token·재발급·JWT 폐기는 현재 미구현이다.</text>
+</g></svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">인증 결과와 인가 판단의 분리</title>
+<desc id="desc">인증은 요청 주체의 신원 확인, 인가는 자원·작업에 대한 접근 권한 판단이다.. 정상 처리 흐름: Authentication → SecurityContext → Authorization. API 응답 사례 — 서로 독립적인 결과: 401 Unauthorized → 403 Forbidden → 200 OK. 폼 로그인은 인증 없음에 302를 반환할 수 있다. CSRF 검증 실패도 403이 가능하므로 실패 경로를 확인한다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="600" fill="#f8fafc"/>
+<g font-family="Apple SD Gothic Neo, Malgun Gothic, Arial, sans-serif" fill="#0f172a">
+<rect x="40" y="32" width="5" height="60" fill="#2563eb"/>
+<text x="62" y="56" font-size="28" font-weight="700">인증 결과와 인가 판단의 분리</text>
+<text x="62" y="88" font-size="18" fill="#475569">인증은 요청 주체의 신원 확인, 인가는 자원·작업에 대한 접근 권한 판단이다.</text>
+<text x="40" y="144" font-size="17" font-weight="700" fill="#334155">정상 처리 흐름</text>
+<rect x="40" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="164" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="200" font-size="21" font-weight="700">Authentication</text>
+<text x="58" y="234" font-size="18">자격 증명 또는 토큰 검증</text>
+<text x="58" y="267" font-size="16" fill="#475569">로그인 입력 / JWT 서명·만료</text>
+<path d="M393 228 H419" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="426" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="164" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="200" font-size="21" font-weight="700">SecurityContext</text>
+<text x="444" y="234" font-size="18">인증된 사용자·권한 저장</text>
+<text x="444" y="267" font-size="16" fill="#475569">후속 검사에서 Authentication 사용</text>
+<path d="M779 228 H805" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="812" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="164" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="200" font-size="21" font-weight="700">Authorization</text>
+<text x="830" y="234" font-size="18">역할·권한·소유 조건 검사</text>
+<text x="830" y="267" font-size="16" fill="#475569">허용 시 컨트롤러·업무 실행</text>
+<text x="40" y="328" font-size="17" font-weight="700" fill="#334155">API 응답 사례 — 서로 독립적인 결과</text>
+<rect x="40" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="348" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="384" font-size="21" font-weight="700">401 Unauthorized</text>
+<text x="58" y="418" font-size="18">인증 정보 없음 또는 유효하지 않음</text>
+<text x="58" y="451" font-size="16" fill="#475569">현재 JWT API: 토큰 없음·만료·위조</text>
+<rect x="426" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="348" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="384" font-size="21" font-weight="700">403 Forbidden</text>
+<text x="444" y="418" font-size="18">유효한 인증, 필요한 권한 없음</text>
+<text x="444" y="451" font-size="16" fill="#475569">예: USER의 관리자 API 호출</text>
+<rect x="812" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="348" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="384" font-size="21" font-weight="700">200 OK</text>
+<text x="830" y="418" font-size="18">인증·인가 조건 충족</text>
+<text x="830" y="451" font-size="16" fill="#475569">예: ADMIN의 관리자 API 호출</text>
+<line x1="40" y1="522" x2="1160" y2="522" stroke="#cbd5e1"/>
+<text x="40" y="558" font-size="17" fill="#475569">폼 로그인은 인증 없음에 302를 반환할 수 있다. CSRF 검증 실패도 403이 가능하므로 실패 경로를 확인한다.</text>
+</g></svg>

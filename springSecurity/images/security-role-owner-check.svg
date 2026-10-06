@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">역할 기반 접근 제어와 객체 소유 조건</title>
+<desc id="desc">URL 인가 이후 메서드 인가를 적용해 경로 정책과 조회 대상의 조건을 검사한다.. GET /api/admin/hello — URL 역할 검사: 요청 인증 → URL 인가 → 처리 결과. GET /api/members/{memId} — 메서드 소유 조건 검사: URL 인가 → @PreAuthorize → 처리 결과. DB 역할 코드: 0 → USER → ROLE_USER / 1 → ADMIN → ROLE_ADMIN. 신규 가입 역할은 서버에서 USER로 지정한다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="600" fill="#f8fafc"/>
+<g font-family="Apple SD Gothic Neo, Malgun Gothic, Arial, sans-serif" fill="#0f172a">
+<rect x="40" y="32" width="5" height="60" fill="#2563eb"/>
+<text x="62" y="56" font-size="28" font-weight="700">역할 기반 접근 제어와 객체 소유 조건</text>
+<text x="62" y="88" font-size="18" fill="#475569">URL 인가 이후 메서드 인가를 적용해 경로 정책과 조회 대상의 조건을 검사한다.</text>
+<text x="40" y="144" font-size="17" font-weight="700" fill="#334155">GET /api/admin/hello — URL 역할 검사</text>
+<rect x="40" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="164" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="200" font-size="21" font-weight="700">요청 인증</text>
+<text x="58" y="234" font-size="18">JWT 검증 → Authentication</text>
+<text x="58" y="267" font-size="16" fill="#475569">유효한 토큰이 없으면 401</text>
+<path d="M393 228 H419" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="426" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="164" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="200" font-size="21" font-weight="700">URL 인가</text>
+<text x="444" y="234" font-size="18">hasRole(&quot;ADMIN&quot;)</text>
+<text x="444" y="267" font-size="16" fill="#475569">ROLE_ADMIN 보유 여부 판단</text>
+<path d="M779 228 H805" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="812" y="164" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="164" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="200" font-size="21" font-weight="700">처리 결과</text>
+<text x="830" y="234" font-size="18">ADMIN 허용 / USER 거부</text>
+<text x="830" y="267" font-size="16" fill="#475569">성공 200 / 권한 부족 403</text>
+<text x="40" y="328" font-size="17" font-weight="700" fill="#334155">GET /api/members/{memId} — 메서드 소유 조건 검사</text>
+<rect x="40" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="348" width="348" height="5" rx="2" fill="#2563eb"/>
+<text x="58" y="384" font-size="21" font-weight="700">URL 인가</text>
+<text x="58" y="418" font-size="18">authenticated()</text>
+<text x="58" y="451" font-size="16" fill="#475569">요청 주체의 인증 요구</text>
+<path d="M393 412 H419" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="426" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="426" y="348" width="348" height="5" rx="2" fill="#0f766e"/>
+<text x="444" y="384" font-size="21" font-weight="700">@PreAuthorize</text>
+<text x="444" y="418" font-size="18">본인 ID 일치 또는 ADMIN</text>
+<text x="444" y="451" font-size="16" fill="#475569">memId == authentication.name</text>
+<path d="M779 412 H805" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="812" y="348" width="348" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="812" y="348" width="348" height="5" rx="2" fill="#475569"/>
+<text x="830" y="384" font-size="21" font-weight="700">처리 결과</text>
+<text x="830" y="418" font-size="18">조건 충족 시 회원 조회</text>
+<text x="830" y="451" font-size="16" fill="#475569">다른 USER의 접근은 403</text>
+<line x1="40" y1="522" x2="1160" y2="522" stroke="#cbd5e1"/>
+<text x="40" y="558" font-size="17" fill="#475569">DB 역할 코드: 0 → USER → ROLE_USER / 1 → ADMIN → ROLE_ADMIN. 신규 가입 역할은 서버에서 USER로 지정한다.</text>
+</g></svg>
